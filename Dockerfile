@@ -5,6 +5,8 @@ RUN npm install --only=production
 COPY app/ ./
 
 FROM node:20-alpine
+# Security Hardening: Patch OS packages and remove global npm/yarn to eliminate CVEs
+RUN apk update && apk upgrade --no-cache && rm -rf /usr/local/lib/node_modules/npm /opt/yarn*
 ENV NODE_ENV=production
 WORKDIR /app
 USER node
