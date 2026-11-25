@@ -3,7 +3,7 @@ pipeline {
 
     environment {
         AWS_REGION     = "eu-north-1"
-        ECR_REGISTRY   = "://amazonaws.com"
+        ECR_REGISTRY   = "477213278971.dkr.ecr.eu-north-1.amazonaws.com"
         ECR_REPOSITORY = "devsecops-telemetry-prod"
         CHATOPS_HOOK   = ""
     }
